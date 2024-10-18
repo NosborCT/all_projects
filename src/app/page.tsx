@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <>
-      <div className=" flex flex-col max-w-xl w-full items-center  p-28	">
-        <h1 className=" text-white ">Motivo do projeto:</h1>
+      <div className=" flex flex-col max-w-xl w-full items-center mt-44 p-7 pb-28	">
+        <h1 className=" text-3xl font-bold text-white ">Motivo do projeto:</h1>
         <p className="   mt-6 text-xl text-white text-center justify-center"> Ao me deparar com um repositório cheio de ideias para apps, resolvi criar este projeto onde realizarei todos os projetos desde o nivem basico ao avançado.</p>
         <p className="   mt-6 text-xl text-white text-center justify-center"> Para acessar os projetos basta utilizar o botão de projetos no canto superior direito.</p>
         <p className="   mt-6 text-xl text-white text-center justify-center"> Para acessar o repositório com as ideias basta clicar no botão abaixo:</p>
