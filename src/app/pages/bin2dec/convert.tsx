@@ -1,6 +1,8 @@
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 
 const Bin2Dec = () => {
   const [binaryText, setBinaryText] = useState("");
@@ -9,7 +11,6 @@ const Bin2Dec = () => {
 
   // Função de conversão
   const convert = () => {
-    // Verifica se a entrada contém apenas 0s e 1s
     if (binaryText.match(/^[0-1]+$/g) === null) {
       setErrorMessage("Digite apenas 0 ou 1");
       return;
@@ -17,13 +18,11 @@ const Bin2Dec = () => {
 
     setErrorMessage(""); // Reset na mensagem de erro
 
-    // Converte o texto binário para um array de números invertidos
     const reversedBinaryText = binaryText
       .split("")
       .map(Number)
       .reverse();
 
-    // Calcula o número decimal
     const result = reversedBinaryText.reduce(
       (accumulator, currentValue, idx) =>
         accumulator + currentValue * Math.pow(2, idx),
