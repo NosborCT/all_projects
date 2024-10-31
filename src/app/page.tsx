@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
-import Link from "next/link";
 import ProjectCard from "./_components/ProjectCard";
+import ProjectCard2 from "./_components/ProjectCard2";
+import ProjectCard3 from "./_components/ProjectCard3";
 export const metadata: Metadata = {
   title: "Home",
   description: "Pagina inicial do projeto",
@@ -11,11 +12,16 @@ export default function Home() {
   return (
     <>
       <div className=" flex flex-col max-w-xl w-full items-center mt-44 p-7 pb-28	">
+        <div className=" text-[#f7f7f7] mb-4 ">
+          <h1 className="text-3xl font-boldflex text-center mb-4 text-white">Sobre mim</h1>
+          <p className="   mt-6 text-xl text-white text-center justify-center">Me chamo Robson Luiz, formado em Engenharia de Software, tenho 22 anos, 
+          e estou realizando este projeto para aprimorar meus conhecimentos. E realizar a criação de um portfolio.</p>
+        </div>
         <h1 className=" text-3xl font-bold text-white ">Motivo do projeto:</h1>
         <p className="   mt-6 text-xl text-white text-center justify-center">
           {" "}
           Ao me deparar com um repositório cheio de ideias para apps, resolvi
-          criar este projeto onde realizarei todos os projetos desde o nível
+          criar este projeto onde realizarei alguns dos projetos desde o nível
           básico ao avançado.
         </p>
         <p className="   mt-6 text-xl text-white text-center justify-center">
@@ -50,7 +56,7 @@ export default function Home() {
           {" "}
           Projetos Tier 2 - Intermediário :{" "}
         </h1>
-        <ProjectCard />
+        <ProjectCard2 />
       </div>
 
       <div>
@@ -58,7 +64,7 @@ export default function Home() {
           {" "}
           Projetos Tier 3 - Avançado :{" "}
         </h1>
-        <ProjectCard />
+        <ProjectCard3 />
       </div>
 
     </>
