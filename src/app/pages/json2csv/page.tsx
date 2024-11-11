@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -79,7 +79,7 @@ const Json2Csv = () => {
                   id="jsonInput"
                   placeholder="Digite o JSON"
                   value={jsonInput}
-                  onChange={(e) => setJsonInput(e.target.value)}
+                  onChange={(e: { target: { value: SetStateAction<string>; }; }) => setJsonInput(e.target.value)}
                   className="resize-y" // Permite redimensionamento vertical
                 />
                 <Button
