@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Bin2Dec = () => {
   const [binaryText, setBinaryText] = useState("");
-  const [decimalText, setDecimalText] = useState("");
+  const [decimalText, setDecimalText] = useState<string | number>("");
   const [errorMessage, setErrorMessage] = useState("");
 
   // Função de conversão
