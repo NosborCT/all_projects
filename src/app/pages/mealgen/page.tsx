@@ -36,7 +36,7 @@ const MealGeneration = () => {
       } else {
         setError("Não foi possível carregar a receita.");
       }
-    } catch (err) {
+    } catch  {
       setError("Erro ao buscar a receita.");
     } finally {
       setLoading(false);

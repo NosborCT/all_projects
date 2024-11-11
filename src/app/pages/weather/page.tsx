@@ -26,7 +26,7 @@ export default function WeatherPage() {
         }
       );
       setWeatherData(response.data);
-    } catch (error) {
+    } catch {
       setError("Cidade não encontrada. Tente novamente.");
       setWeatherData(null);
     }

@@ -41,7 +41,7 @@ const Json2Csv = () => {
       // Atualiza o resultado CSV
       setCsvOutput(csvRows.join("\n"));
       setErrorMessage(""); // Limpa mensagem de erro
-    } catch (error) {
+    } catch {
       setErrorMessage("Formato JSON inválido ou vazio.");
       setCsvOutput("");
     }
