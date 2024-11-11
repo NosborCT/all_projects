@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const projects = [
     { title: "bin2dec", difficulty: "Easy", description: "projeto simples para transformar binário para decimal.", link: "/pages/bin2dec" },
-    { title: "Meal Gen", difficulty: "Easy", description: "projeto para gerar uma comida aleatória.", link: "/pages/meal" },
+    { title: "Meal Gen", difficulty: "Easy", description: "projeto para gerar uma comida aleatória.", link: "/pages/mealgen" },
     { title: "Json2csv", difficulty: "Easy", description: "Transformando um arquivo Json em CSV.", link: "/pages/json2csv" },
     { title: "Weather App", difficulty: "Easy", description: "Usando a api de previsão do tempo.", link: "/pages/weather" },
   ]

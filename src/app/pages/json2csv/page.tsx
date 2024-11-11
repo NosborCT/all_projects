@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Json2Csv = () => {
   const [jsonInput, setJsonInput] = useState("");
@@ -31,14 +32,15 @@ const Json2Csv = () => {
 
       // Converte cada objeto para uma linha CSV
       jsonData.forEach((obj) => {
-        const values = headers.map((header) => JSON.stringify(obj[header] || ""));
+        const values = headers.map((header) =>
+          JSON.stringify(obj[header] || "")
+        );
         csvRows.push(values.join(","));
       });
 
       // Atualiza o resultado CSV
       setCsvOutput(csvRows.join("\n"));
       setErrorMessage(""); // Limpa mensagem de erro
-
     } catch (error) {
       setErrorMessage("Formato JSON inválido ou vazio.");
       setCsvOutput("");
@@ -61,50 +63,59 @@ const Json2Csv = () => {
   };
 
   return (
-    <main className="max-w-3xl w-full p-7 bg-[#053D39]">
-      <div className="flex flex-col items-center">
-        <h1 className="text-[#f7f7f7] text-3xl">Conversão de JSON para CSV</h1>
-      </div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <main >
+        <Card className="col-span-1 md:col-span-2 ">
+          <CardContent>
+            <div className="flex flex-col items-center">
+              <h1 className="text-3xl p-7">
+                Conversão de JSON para CSV
+              </h1>
+            </div>
 
-      <div className="flex text-[#f7f7f7] flex-col items-center mt-10">
-        <div className="flex flex-col w-full max-w-md space-y-4">
-          <Textarea
-            id="jsonInput"
-            placeholder="Digite o JSON"
-            value={jsonInput}
-            onChange={(e) => setJsonInput(e.target.value)}
-            className="resize-y" // Permite redimensionamento vertical
-          />
-          <Button
-            onClick={convertJsonToCsv}
-            className="transition duration-300 bg-[#FC7F42] hover:bg-[#D9D9D9] hover:text-black text-lg"
-            type="button"
-          >
-            Converter
-          </Button>
-          {errorMessage && <span className="text-red-500">{errorMessage}</span>}
-        </div>
+            <div className="flex  flex-col items-center mt-10">
+              <div className="flex flex-col w-full max-w-md space-y-4">
+                <Textarea
+                  id="jsonInput"
+                  placeholder="Digite o JSON"
+                  value={jsonInput}
+                  onChange={(e) => setJsonInput(e.target.value)}
+                  className="resize-y" // Permite redimensionamento vertical
+                />
+                <Button
+                  onClick={convertJsonToCsv}
+                  type="button"
+                >
+                  Converter
+                </Button>
+                {errorMessage && (
+                  <span className="text-red-500">{errorMessage}</span>
+                )}
+              </div>
 
-        <div className="max-w-md w-full mt-5">
-          <Input
-            type="text"
-            placeholder="Resultado em CSV"
-            value={csvOutput}
-            readOnly
-            className="w-full"
-          />
-          {csvOutput && (
-            <Button
-              onClick={downloadCsv}
-              className="mt-4 transition duration-300 bg-[#FC7F42] hover:bg-[#D9D9D9] hover:text-black text-lg"
-              type="button"
-            >
-              Baixar CSV
-            </Button>
-          )}
-        </div>
-      </div>
-    </main>
+              <div className="max-w-md w-full mt-5">
+                <Input
+                  type="text"
+                  placeholder="Resultado em CSV"
+                  value={csvOutput}
+                  readOnly
+                  className="w-full"
+                />
+                {csvOutput && (
+                  <Button
+                    onClick={downloadCsv}
+                    className="mt-2"
+                    type="button"
+                  >
+                    Baixar CSV
+                  </Button>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </main>
+    </div>
   );
 };
 

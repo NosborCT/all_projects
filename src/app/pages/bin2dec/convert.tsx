@@ -30,9 +30,9 @@ const Bin2Dec = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
+    <div className=" bg-gradient-to-b flex flex-col items-center justify-center min-h-screen from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800">
       <main>
-        <Card className="col-span-1 md:col-span-2 mt-10">
+        <Card className="col-span-1 md:col-span-2 ">
           <CardContent>
             <div className="flex flex-col items-center">
               <h1 className="text-3xl p-7 font-bold  text-center text-gray-900 dark:text-white">
