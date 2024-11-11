@@ -1,51 +1,43 @@
-import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
-
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-  SheetClose,
-} from "@/components/ui/sheet";
 
 const Header = () => {
   return (
     <>
-      <header className=" w-full max-w-5xl flex justify-between items-center mb-12 ">
-          <Link href="/">
-            <div className="flex items-center cursor-pointer">
-              <h1 className=" text-white text-2xl font-bold">Home</h1>
-            </div>
+  <header className="w-full flex justify-between sticky top-0 z-10 bg-white dark:bg-gray-900 shadow-md">
+    <nav className="container mx-auto px-6 py-3">
+      <div className="flex justify-between items-center">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-gray-800 dark:text-white"
+        >
+          My Portfolio
+        </Link>
+        <div className="flex space-x-4">
+          <Link
+            href="https://github.com/NosborCT" target="_blanc"
+            className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
+          >
+            <Github className="h-6 w-6" />
           </Link>
+          <Link
+            href="https://www.linkedin.com/in/robsonluizn/" target="_blanc"
+            className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
+          >
+            <Linkedin className="h-6 w-6" />
+          </Link>
+          <Link
+            href="robsonfilho007@hotmail.com" target="_blanc"
+            className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
+          >
+            <Mail className="h-6 w-6" />
+          </Link>
+        </div>
+      </div>
+    </nav>
+  </header>
+</>
 
-
-          <Sheet>
-          <SheetTrigger asChild>
-            <Button className=" transition duration-300 bg-[#FC7F42] hover:bg-[#D9D9D9] hover:text-black text-lg ">Projetos</Button>
-
-
-          </SheetTrigger>
-          <SheetContent className="w-[400px] sm:w-[540px] bg-[#053D39] ">
-            <SheetHeader>
-              <SheetTitle className=" text-white mb-5" >Projetos:</SheetTitle>
-              <SheetDescription className=" text-white">
-                  
-                  <Link href = "/pages/bin2dec">
-                    
-                    <SheetClose asChild>
-                      <Button className=" flex w-full max-w-md  font-semibold transition duration-300 bg-[#FC7F42] hover:bg-[#D9D9D9] hover:text-black" >Bin2Dec</Button>
-                    </SheetClose>
-                  </Link>
-              </SheetDescription>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
-
-      </header>
-    </>
   );
 };
 
