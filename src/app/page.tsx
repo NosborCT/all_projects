@@ -90,7 +90,7 @@ export default function Home() {
                   <div className="flex items-center">
                     <Briefcase className="h-5 w-5 mr-2 text-primary" />
                     <span className="text-gray-600 dark:text-gray-300">
-                      1 year experience profissionaly
+                      1 year experience profissional
                     </span>
                   </div>
                   <div className="flex items-center">
