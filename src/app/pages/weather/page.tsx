@@ -6,9 +6,26 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+interface WeatherData {
+  name: string;
+  sys: {
+    country: string;
+  };
+  main: {
+    temp: number;
+    humidity: number;
+  };
+  weather: {
+    description: string;
+  }[];
+  wind: {
+    speed: number;
+  };
+}
+
 export default function WeatherPage() {
   const [city, setCity] = useState("");
-  const [weatherData, setWeatherData] = useState(null);
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [error, setError] = useState("");
 
   const fetchWeather = async () => {
@@ -49,11 +66,7 @@ export default function WeatherPage() {
                 onChange={(e) => setCity(e.target.value)}
                 className="flex-grow mr-2"
               />
-              <Button
-                onClick={fetchWeather}
-              >
-                Buscar
-              </Button>
+              <Button onClick={fetchWeather}>Buscar</Button>
             </div>
 
             {error && <p className="text-red-500">{error}</p>}
