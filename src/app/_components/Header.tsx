@@ -11,7 +11,7 @@ const Header = () => {
           href="/"
           className="text-2xl font-bold text-gray-800 dark:text-white"
         >
-          My Portfolio
+          Home
         </Link>
         <div className="flex space-x-4">
           <Link
