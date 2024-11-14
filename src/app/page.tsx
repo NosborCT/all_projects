@@ -48,8 +48,8 @@ export default function Home() {
             Sobre Mim
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="col-span-1 md:col-span-2">
-              <CardContent className="pt-6">
+            <Card className="col-span-1 md:col-span-2 flex justify-center items-center">
+              <CardContent className="pt-6 justify-center items-center">
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Sou um desenvolvedor full-stack apaixonado por tecnologia e
                   inovação. Com uma formação em Engenharia de Software,
