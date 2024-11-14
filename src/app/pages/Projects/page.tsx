@@ -18,6 +18,7 @@ const projects = [
     { title: "Meal Gen", difficulty: "Easy", description: "projeto para gerar uma comida aleatória.", link: "/pages/mealgen" },
     { title: "Json2csv", difficulty: "Easy", description: "Transformando um arquivo Json em CSV.", link: "/pages/json2csv" },
     { title: "Weather App", difficulty: "Easy", description: "Usando a api de previsão do tempo.", link: "/pages/weather" },
+    { title: "Login Page", difficulty: "Easy", description: "Projeto simples para login.", link: "/pages/login" },
   ]
   
   export default function Projects() {
